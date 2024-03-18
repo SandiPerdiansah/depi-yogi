@@ -6,7 +6,7 @@
 
 @layer components {
   .descript {
-    @apply text-base lg:text-xl text-gray-400;
+    @apply text-sm lg:text-xl text-gray-400;
   }
 }
 
@@ -152,10 +152,14 @@ footer div:first-child::before {
   object-fit: cover;
 }
 
+/* .textarea-wrapper {
+  background-color: aqua !important;
+} */
+
 @media screen and (max-width: 768px) {
   .gallery-card {
-    margin-left: 4rem;
-    width: 24rem;
+    /* margin-left: 4rem;
+    width: 24rem; */
   }
 
   .gallery-card::before {
@@ -163,7 +167,6 @@ footer div:first-child::before {
   }
 
   .line {
-    top: 0;
-    left: 0;
+    display: none;
   }
 }

@@ -35,15 +35,15 @@
 
 @media screen and (max-width: 768px) {
   .simply-countdown > .simply-section {
-    padding: 40px;
+    padding: 30px;
     margin: 5px;
   }
 
   .simply-countdown > .simply-section .simply-amount {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .simply-countdown > .simply-section .simply-word {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

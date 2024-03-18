@@ -1044,8 +1044,8 @@ input:checked + .toggle-bg{
 }
 
 .descript{
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
@@ -1153,11 +1153,6 @@ input:checked + .toggle-bg{
   order: 2;
 }
 
-.mx-1{
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1171,6 +1166,10 @@ input:checked + .toggle-bg{
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.-mt-16{
+  margin-top: -4rem;
 }
 
 .mb-1{
@@ -1187,10 +1186,6 @@ input:checked + .toggle-bg{
 
 .mb-8{
   margin-bottom: 2rem;
-}
-
-.mb-auto{
-  margin-bottom: auto;
 }
 
 .mt-12{
@@ -1249,10 +1244,6 @@ input:checked + .toggle-bg{
   display: none;
 }
 
-.h-10{
-  height: 2.5rem;
-}
-
 .h-14{
   height: 3.5rem;
 }
@@ -1277,12 +1268,20 @@ input:checked + .toggle-bg{
   height: 1px;
 }
 
-.h-\[25rem\]{
-  height: 25rem;
+.h-\[20rem\]{
+  height: 20rem;
 }
 
-.h-\[30rem\]{
-  height: 30rem;
+.h-\[22rem\]{
+  height: 22rem;
+}
+
+.h-\[23rem\]{
+  height: 23rem;
+}
+
+.h-\[25rem\]{
+  height: 25rem;
 }
 
 .h-\[37rem\]{
@@ -1293,8 +1292,8 @@ input:checked + .toggle-bg{
   height: 39rem;
 }
 
-.h-\[6rem\]{
-  height: 6rem;
+.h-\[5rem\]{
+  height: 5rem;
 }
 
 .h-full{
@@ -1307,10 +1306,6 @@ input:checked + .toggle-bg{
 
 .w-1\/2{
   width: 50%;
-}
-
-.w-10{
-  width: 2.5rem;
 }
 
 .w-14{
@@ -1351,10 +1346,6 @@ input:checked + .toggle-bg{
 
 .w-full{
   width: 100%;
-}
-
-.max-w-\[22rem\]{
-  max-width: 22rem;
 }
 
 .flex-1{
@@ -1471,16 +1462,8 @@ input:checked + .toggle-bg{
   gap: 0.5rem;
 }
 
-.gap-3{
-  gap: 0.75rem;
-}
-
 .gap-4{
   gap: 1rem;
-}
-
-.gap-5{
-  gap: 1.25rem;
 }
 
 .gap-6{
@@ -1694,6 +1677,11 @@ input:checked + .toggle-bg{
   padding-right: 1.25rem;
 }
 
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1727,11 +1715,6 @@ input:checked + .toggle-bg{
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .py-8{
@@ -1788,11 +1771,6 @@ input:checked + .toggle-bg{
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .text-base{
@@ -2097,10 +2075,14 @@ footer div:first-child::before {
      object-fit: cover;
 }
 
+/* .textarea-wrapper {
+  background-color: aqua !important;
+} */
+
 @media screen and (max-width: 768px) {
   .gallery-card {
-    margin-left: 4rem;
-    width: 24rem;
+    /* margin-left: 4rem;
+    width: 24rem; */
   }
 
   .gallery-card::before {
@@ -2108,8 +2090,7 @@ footer div:first-child::before {
   }
 
   .line {
-    top: 0;
-    left: 0;
+    display: none;
   }
 }
 
@@ -2350,6 +2331,10 @@ footer div:first-child::before {
     height: 20rem;
   }
 
+  .lg\:h-\[30rem\]{
+    height: 30rem;
+  }
+
   .lg\:h-\[32rem\]{
     height: 32rem;
   }
@@ -2422,8 +2407,17 @@ footer div:first-child::before {
     gap: 14rem;
   }
 
+  .lg\:gap-8{
+    gap: 2rem;
+  }
+
   .lg\:p-8{
     padding: 2rem;
+  }
+
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:px-16{
@@ -2474,11 +2468,6 @@ footer div:first-child::before {
   .lg\:text-8xl{
     font-size: 6rem;
     line-height: 1;
-  }
-
-  .lg\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .lg\:text-xl{
