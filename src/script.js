@@ -72,8 +72,12 @@ document.querySelector('#open').addEventListener('click', () => {
   song.play();
   audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle""></i>`;
   document.querySelector(':root').style.scrollBehavior = 'smooth';
-  audioPlay();
+
+  setTimeout(() => {
+    document.querySelector('.navigasi').classList.add('active');
+  }, 2000)
 });
+
 
 // swiper
 const swiper = new Swiper('.mySwiper', {
