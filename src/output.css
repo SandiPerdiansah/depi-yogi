@@ -1192,10 +1192,6 @@ input:checked + .toggle-bg{
   margin-top: 3rem;
 }
 
-.mt-16{
-  margin-top: 4rem;
-}
-
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -1206,10 +1202,6 @@ input:checked + .toggle-bg{
 
 .mt-4{
   margin-top: 1rem;
-}
-
-.mt-6{
-  margin-top: 1.5rem;
 }
 
 .mt-8{
@@ -1264,12 +1256,12 @@ input:checked + .toggle-bg{
   height: 2.25rem;
 }
 
-.h-\[1px\]{
-  height: 1px;
+.h-\[15rem\]{
+  height: 15rem;
 }
 
-.h-\[20rem\]{
-  height: 20rem;
+.h-\[1px\]{
+  height: 1px;
 }
 
 .h-\[22rem\]{
@@ -1278,6 +1270,10 @@ input:checked + .toggle-bg{
 
 .h-\[23rem\]{
   height: 23rem;
+}
+
+.h-\[24rem\]{
+  height: 24rem;
 }
 
 .h-\[25rem\]{
@@ -1692,11 +1688,6 @@ input:checked + .toggle-bg{
   padding-bottom: 0px;
 }
 
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .py-16{
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -2075,21 +2066,86 @@ footer div:first-child::before {
      object-fit: cover;
 }
 
-/* .textarea-wrapper {
-  background-color: aqua !important;
-} */
+.navigasi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 0.6rem;
+  height: 4rem;
+  background-color: rgba(21, 21, 20, 0.7);
+  position: fixed;
+  bottom: 1rem;
+  left: 5rem;
+  right: 5rem;
+  z-index: 99;
+}
 
-@media screen and (max-width: 768px) {
-  .gallery-card {
-    /* margin-left: 4rem;
-    width: 24rem; */
+.navigasi a {
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+  color: #ecbb6c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.navigasi a:hover {
+  color: rgb(141, 103, 37);
+}
+
+.navigasi a span {
+  font-size: 0.5rem;
+}
+
+.audio-play {
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  animation: rotating 4s linear infinite;
+}
+
+.audio-play.active {
+  display: flex;
+}
+
+.audio-play i {
+  color: #ecbb6c;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
   }
 
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .gallery-card::before {
     display: none;
   }
 
   .line {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigasi {
     display: none;
   }
 }
@@ -2313,6 +2369,10 @@ footer div:first-child::before {
 
   .lg\:mt-14{
     margin-top: 3.5rem;
+  }
+
+  .lg\:mt-16{
+    margin-top: 4rem;
   }
 
   .lg\:mt-2{

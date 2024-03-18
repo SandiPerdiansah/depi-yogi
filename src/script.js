@@ -37,6 +37,44 @@ document.querySelectorAll('#btnCopy').forEach((btn) => {
   });
 });
 
+// audio play
+let isPlaying = true;
+const audioPlay = document.querySelector('.audio-play');
+const song = document.querySelector('#song');
+
+audioPlay.addEventListener('click', () => {
+  if (isPlaying) {
+    song.volume = 0.1;
+    song.play();
+    audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle""></i>`;
+  } else {
+    song.volume = 0;
+    song.pause();
+    audioPlay.innerHTML = /* html */ `<i class="bx bx-play-circle""></i>`;
+  }
+  isPlaying = !isPlaying;
+});
+
+// disable scroll
+(function disableSceoll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  window.onscroll = function () {
+    window.scrollTo(scrollTop, scrollLeft);
+  };
+  document.querySelector(':root').style.scrollBehavior = 'auto';
+})();
+
+document.querySelector('#open').addEventListener('click', () => {
+  audioPlay.classList.add('active');
+  window.onscroll = function () {};
+  song.volume = 0.1;
+  song.play();
+  audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle""></i>`;
+  document.querySelector(':root').style.scrollBehavior = 'smooth';
+  audioPlay();
+});
+
 // swiper
 const swiper = new Swiper('.mySwiper', {
   slidesPerView: 4,
@@ -57,7 +95,7 @@ const swiper = new Swiper('.mySwiper', {
 simplyCountdown('#simply-countdown', {
   year: 2024,
   month: 4,
-  day: 4,
+  day: 14,
   hours: 8,
   minutes: 0,
   seconds: 0,
@@ -78,7 +116,6 @@ simplyCountdown('#simply-countdown', {
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
 })();
-
 
 // animate on scroll
 AOS.init();
