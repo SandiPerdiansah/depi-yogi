@@ -2069,15 +2069,18 @@ footer div:first-child::before {
 .navigasi {
   display: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-radius: 50px;
   padding: 0.8rem;
+  max-width: 20rem;
   height: 3rem;
   background-color: rgba(21, 21, 20, 0.7);
   position: fixed;
   bottom: 1rem;
-  left: 8rem;
-  right: 8rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  gap: 1rem;
   z-index: 99;
 }
 
@@ -2103,8 +2106,8 @@ footer div:first-child::before {
 }
 
 .audio-play {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   display: none;
   align-items: center;
   justify-content: center;
@@ -2148,6 +2151,10 @@ footer div:first-child::before {
 
 @media screen and (min-width: 1024px) {
   .navigasi {
+    display: none;
+  }
+
+  .navigasi.active {
     display: none;
   }
 }
@@ -2470,11 +2477,6 @@ footer div:first-child::before {
 
   .lg\:p-8{
     padding: 2rem;
-  }
-
-  .lg\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:px-16{

@@ -65,19 +65,23 @@ audioPlay.addEventListener('click', () => {
   document.querySelector(':root').style.scrollBehavior = 'auto';
 })();
 
-document.querySelector('#open').addEventListener('click', () => {
-  audioPlay.classList.add('active');
-  window.onscroll = function () {};
-  song.volume = 0.1;
-  song.play();
-  audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle""></i>`;
-  document.querySelector(':root').style.scrollBehavior = 'smooth';
+const documentOpen = document.querySelector('#open');
+document.addEventListener('click', (e) => {
+  documentOpen.querySelectorAll('i').forEach((item) => {
+    if (e.target === item || e.target === documentOpen || e.target === documentOpen.querySelector('p')) {
+      audioPlay.classList.add('active');
+      window.onscroll = function () {};
+      song.volume = 0.1;
+      song.play();
+      audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle""></i>`;
+      document.querySelector(':root').style.scrollBehavior = 'smooth';
 
-  setTimeout(() => {
-    document.querySelector('.navigasi').classList.add('active');
-  }, 2000)
+      setTimeout(() => {
+        document.querySelector('.navigasi').classList.add('active');
+      }, 2000);
+    }
+  });
 });
-
 
 // swiper
 const swiper = new Swiper('.mySwiper', {
