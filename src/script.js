@@ -50,11 +50,11 @@ audioPlay.addEventListener('click', () => {
   if (isPlaying) {
     song.volume = 1;
     song.play();
-    audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle""></i>`;
+    audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle"></i>`;
   } else {
     song.volume = 0;
     song.pause();
-    audioPlay.innerHTML = /* html */ `<i class="bx bx-play-circle""></i>`;
+    audioPlay.innerHTML = /* html */ `<i class="bx bx-play-circle"></i>`;
   }
   isPlaying = !isPlaying;
 });
@@ -62,7 +62,7 @@ audioPlay.addEventListener('click', () => {
 // scroll window
 document.addEventListener('scroll', () => {
   const windowScroll = window.scrollY;
-  if (windowScroll > 50) {
+  if (windowScroll > 70) {
     document.querySelector('.navigasi').classList.toggle('active', windowScroll > 100);
     audioPlay.classList.toggle('active', windowScroll > 100);
   }
@@ -85,7 +85,8 @@ document.querySelector('#open-wedding').addEventListener('click', () => {
   window.onscroll = function () {};
   song.volume = 1;
   song.play();
-  isPlaying = false
+  isPlaying = false;
+  audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle"></i>`;
 });
 
 // swiper
