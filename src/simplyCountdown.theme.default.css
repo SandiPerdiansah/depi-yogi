@@ -5,25 +5,26 @@
 
 .simply-countdown > .simply-section {
   width: 50px;
-  height: 50px;
-  padding: 50px;
+  height: 30px;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   float: left;
   margin: 15px;
-  background: rgb(21, 21, 20);
+  background: #151514;
   box-shadow: 0 1px 5px rgba(236, 187, 108, 0.6), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 50%;
+  border-radius: 20px;
 }
 
 .simply-countdown > .simply-section .simply-word {
   color: white;
+  font-size: 1rem;
 }
 
 .simply-countdown > .simply-section .simply-amount {
   color: rgb(236, 187, 108);
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -35,15 +36,16 @@
 
 @media screen and (max-width: 768px) {
   .simply-countdown > .simply-section {
-    padding: 33px;
+    padding: 20px;
     margin: 5px;
+    border-radius: 10px;
   }
 
   .simply-countdown > .simply-section .simply-amount {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .simply-countdown > .simply-section .simply-word {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }

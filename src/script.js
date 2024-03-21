@@ -31,6 +31,10 @@ document.querySelectorAll('#btnCopy').forEach((btn) => {
     navigator.clipboard.writeText(parseInt(contentCopy));
     btn.innerHTML = /* html */ `<i class="bx bx-check"></i> <p>copied</p>`;
 
+    setInterval(() => {
+      btn.innerHTML = /* html */ `<i class="bx bx-copy"></i> <p>${String(contentCopy)}</p>`;
+    }, 2000);
+
     document.addEventListener('DOMContentLoaded', () => {
       btn.innerHTML = /* html */ `<i class="bx bx-copy"></i> <p>${String(contentCopy)}</p>`;
     });
@@ -44,7 +48,7 @@ const song = document.querySelector('#song');
 
 audioPlay.addEventListener('click', () => {
   if (isPlaying) {
-    song.volume = 0.1;
+    song.volume = 1;
     song.play();
     audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle""></i>`;
   } else {
@@ -55,8 +59,16 @@ audioPlay.addEventListener('click', () => {
   isPlaying = !isPlaying;
 });
 
-// disable scroll
-(function disableSceoll() {
+// scroll window
+document.addEventListener('scroll', () => {
+  const windowScroll = window.scrollY;
+  if (windowScroll > 50) {
+    document.querySelector('.navigasi').classList.toggle('active', windowScroll > 100);
+    audioPlay.classList.toggle('active', windowScroll > 100);
+  }
+});
+
+(function disableScroll() {
   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
   window.onscroll = function () {
@@ -65,22 +77,15 @@ audioPlay.addEventListener('click', () => {
   document.querySelector(':root').style.scrollBehavior = 'auto';
 })();
 
-const documentOpen = document.querySelector('#open');
-document.addEventListener('click', (e) => {
-  documentOpen.querySelectorAll('i').forEach((item) => {
-    if (e.target === item || e.target === documentOpen || e.target === documentOpen.querySelector('p')) {
-      audioPlay.classList.add('active');
-      window.onscroll = function () {};
-      song.volume = 0.1;
-      song.play();
-      audioPlay.innerHTML = /* html */ `<i class="bx bx-pause-circle""></i>`;
-      document.querySelector(':root').style.scrollBehavior = 'smooth';
-
-      setTimeout(() => {
-        document.querySelector('.navigasi').classList.add('active');
-      }, 2000);
-    }
-  });
+document.querySelector('#open-wedding').addEventListener('click', () => {
+  document.querySelector('.sampul').classList.add('scroll');
+  document.querySelector('header').classList.toggle('active');
+  window.scrollTo(0, 0);
+  document.querySelector(':root').style.scrollBehavior = 'smooth';
+  window.onscroll = function () {};
+  song.volume = 1;
+  song.play();
+  isPlaying = false
 });
 
 // swiper
@@ -103,7 +108,7 @@ const swiper = new Swiper('.mySwiper', {
 simplyCountdown('#simply-countdown', {
   year: 2024,
   month: 4,
-  day: 14,
+  day: 13,
   hours: 8,
   minutes: 0,
   seconds: 0,
