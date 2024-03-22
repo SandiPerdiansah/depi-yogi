@@ -1109,6 +1109,10 @@ input:checked + .toggle-bg{
   right: 0px;
 }
 
+.right-2{
+  right: 0.5rem;
+}
+
 .right-\[22rem\]{
   right: 22rem;
 }
@@ -1119,6 +1123,10 @@ input:checked + .toggle-bg{
 
 .top-\[39\.5rem\]{
   top: 39.5rem;
+}
+
+.top-\[50\%\]{
+  top: 50%;
 }
 
 .top-\[80rem\]{
@@ -1830,6 +1838,10 @@ input:checked + .toggle-bg{
   font-weight: 500;
 }
 
+.font-normal{
+  font-weight: 400;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -1844,6 +1856,11 @@ input:checked + .toggle-bg{
 
 .leading-9{
   line-height: 2.25rem;
+}
+
+.text-\[\#7a0002\]{
+  --tw-text-opacity: 1;
+  color: rgb(122 0 2 / var(--tw-text-opacity));
 }
 
 .text-blue-600{
@@ -2164,9 +2181,9 @@ footer div:first-child::before {
   justify-content: center;
   transform-origin: center;
   position: fixed;
-  top: 50%;
+  top: 0.5rem;
   right: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
   cursor: pointer;
   opacity: 0;
   animation: rotating 4s linear infinite;
@@ -2212,6 +2229,10 @@ footer div:first-child::before {
 
   .line {
     display: none;
+  }
+
+  .sampul::before {
+    background-image: url('../assets/img/background/2.jpg');
   }
 }
 
@@ -2290,6 +2311,11 @@ footer div:first-child::before {
 .hover\:text-gray-900:hover{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus{

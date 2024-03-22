@@ -62,7 +62,7 @@ audioPlay.addEventListener('click', () => {
 // scroll window
 document.addEventListener('scroll', () => {
   const windowScroll = window.scrollY;
-  if (windowScroll > 70) {
+  if (windowScroll > 50) {
     document.querySelector('.navigasi').classList.toggle('active', windowScroll > 100);
     audioPlay.classList.toggle('active', windowScroll > 100);
   }

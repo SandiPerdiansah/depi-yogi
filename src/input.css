@@ -212,9 +212,9 @@ footer div:first-child::before {
   justify-content: center;
   transform-origin: center;
   position: fixed;
-  top: 50%;
+  top: 0.5rem;
   right: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
   cursor: pointer;
   opacity: 0;
   animation: rotating 4s linear infinite;
@@ -260,6 +260,10 @@ footer div:first-child::before {
   .line {
     display: none;
   }
+
+  .sampul::before {
+    background-image: url('../assets/img/background/2.jpg');
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -270,4 +274,6 @@ footer div:first-child::before {
   .navigasi.active {
     display: none;
   }
+
+  
 }
