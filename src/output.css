@@ -1176,6 +1176,10 @@ input:checked + .toggle-bg{
   margin-bottom: 2rem;
 }
 
+.-ms-8{
+  margin-inline-start: -2rem;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -2181,7 +2185,7 @@ footer div:first-child::before {
   justify-content: center;
   transform-origin: center;
   position: fixed;
-  top: 0.5rem;
+  top: 50%;
   right: 0.5rem;
   font-size: 1.6rem;
   cursor: pointer;
@@ -2461,6 +2465,10 @@ footer div:first-child::before {
 
   .lg\:mb-4{
     margin-bottom: 1rem;
+  }
+
+  .lg\:ms-0{
+    margin-inline-start: 0px;
   }
 
   .lg\:mt-0{
